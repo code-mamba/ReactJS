@@ -4,12 +4,38 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+function Today(props){
+  return (
+    <div>
+      
+        <h1>Hello, World</h1>
+       <h2>Today's Date is{props.date.toDateString()}</h2>
+       <h2>Now the time is {new Date().toLocaleTimeString()}</h2>
+      </div>
+   
+  )
+}
+function Tick(){
+  const element = (<div>
+    <App></App>
+    <Today date = {new Date()}></Today>
+    
+  </div>)
+root.render(element)
+}
+
+setInterval(Tick,1000)
+
+
+
+
+
+
+
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

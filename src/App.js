@@ -6,7 +6,8 @@ import Calculator from './LiftingStateUp';
 import Toggle from './HandleClicks';
 import SignupDialogueBox from './Composition';
 import React, { Suspense } from 'react';
-import Theme from './context';
+import { UserProvider } from './userContext';
+import ComponentC from './ComponentC';
 
 const MyComp = React.lazy(()=>import('./calc'))
 
@@ -26,7 +27,9 @@ function App() {
         <Suspense fallback = {<div>Loading...</div>}> 
         <MyComp></MyComp>
         </Suspense> */}
-        <Theme></Theme>
+        <UserProvider value = "Dhanush B">
+        <ComponentC></ComponentC>
+        </UserProvider>
        
       
         

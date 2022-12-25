@@ -12,7 +12,7 @@ class SignupDialogueBox extends React.Component{
     handleChange(e){
             this.setState({login:e.target.value})
     }
-    handleSubmit(e){
+    handleSubmit(){
         alert(`Welcome ${this.state.login}`)
     }
 

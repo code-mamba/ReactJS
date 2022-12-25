@@ -11,6 +11,7 @@ import ComponentC from './ComponentC';
 import Hero from './ErrorBoundaryHero';
 import ErrorBoundary from './ErrorBoundary';
 import FrParentInput from './ForwardRefParentInput';
+import Table from './FragmentTable';
 
 const MyComp = React.lazy(()=>import('./calc'))
 
@@ -39,7 +40,8 @@ function App() {
       <ErrorBoundary>
       <Hero SuperHero={"Joker"}></Hero>
       </ErrorBoundary> */}
-      <FrParentInput></FrParentInput>
+      {/* <FrParentInput></FrParentInput> */}
+      <Table></Table>
       </header>
 
     </div>

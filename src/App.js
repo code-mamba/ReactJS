@@ -8,6 +8,9 @@ import SignupDialogueBox from './Composition';
 import React, { Suspense } from 'react';
 import { UserProvider } from './userContext';
 import ComponentC from './ComponentC';
+import Hero from './ErrorBoundaryHero';
+import ErrorBoundary from './ErrorBoundary';
+import FrParentInput from './ForwardRefParentInput';
 
 const MyComp = React.lazy(()=>import('./calc'))
 
@@ -27,13 +30,18 @@ function App() {
         <Suspense fallback = {<div>Loading...</div>}> 
         <MyComp></MyComp>
         </Suspense> */}
-        <UserProvider value = "Dhanush B">
+        {/* <UserProvider value = "Dhanush B">
         <ComponentC></ComponentC>
         </UserProvider>
-       
-      
         
+       <Hero SuperHero={'Batman'}></Hero>
+      <Hero SuperHero={"Superman"}></Hero>
+      <ErrorBoundary>
+      <Hero SuperHero={"Joker"}></Hero>
+      </ErrorBoundary> */}
+      <FrParentInput></FrParentInput>
       </header>
+
     </div>
   );
 }

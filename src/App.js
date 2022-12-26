@@ -12,7 +12,11 @@ import Hero from './ErrorBoundaryHero';
 import ErrorBoundary from './ErrorBoundary';
 import FrParentInput from './ForwardRefParentInput';
 import Table from './FragmentTable';
-
+import ClickCounter from './HOCclickCounter';
+import Hover from './HocHover';
+import Jquery from './otherLibraries';
+import PortalDemo from './PortalDemo';
+import MyFunct from './jsx-indept';
 const MyComp = React.lazy(()=>import('./calc'))
 
 
@@ -30,8 +34,8 @@ function App() {
 
         <Suspense fallback = {<div>Loading...</div>}> 
         <MyComp></MyComp>
-        </Suspense> */}
-        {/* <UserProvider value = "Dhanush B">
+        </Suspense>
+        <UserProvider value = "Dhanush B">
         <ComponentC></ComponentC>
         </UserProvider>
         
@@ -39,9 +43,14 @@ function App() {
       <Hero SuperHero={"Superman"}></Hero>
       <ErrorBoundary>
       <Hero SuperHero={"Joker"}></Hero>
-      </ErrorBoundary> */}
-      {/* <FrParentInput></FrParentInput> */}
+      </ErrorBoundary>
+      <FrParentInput></FrParentInput>
       <Table></Table>
+      <ClickCounter></ClickCounter>
+      <Hover></Hover> */}
+      {/* <Jquery></Jquery> */}
+      <PortalDemo></PortalDemo>
+      <MyFunct></MyFunct>
       </header>
 
     </div>

@@ -8,7 +8,7 @@ import React from "react";
 //         </div>
 //     )
 // }
-const FRInput = React.forwardRef((props, ref)=>{
+const FRInput = React.forwardRef((props,ref)=>{
     return(
         <div>
             <input type="text" ref={ref}></input>

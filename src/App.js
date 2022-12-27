@@ -51,17 +51,18 @@ function App() {
       <ErrorBoundary>
       <Hero SuperHero={"Joker"}></Hero>
       </ErrorBoundary>
-      <FrParentInput></FrParentInput>
+      
       <Table></Table>
       <ClickCounter></ClickCounter>
       <Profiler id='Hover' onRender={onRendercallback}>
       <Hover></Hover> 
       </Profiler>
       <Jquery></Jquery>
-      <PortalDemo></PortalDemo>
-      <MyFunct></MyFunct> */}
+      <PortalDemo></PortalDemo> */}
+      <MyFunct></MyFunct> 
       <RefDom></RefDom>
       <NameForm></NameForm>
+      <FrParentInput></FrParentInput>
       </header>
 
     </div>

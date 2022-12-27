@@ -17,10 +17,17 @@ import Hover from './HocHover';
 import Jquery from './otherLibraries';
 import PortalDemo from './PortalDemo';
 import MyFunct from './jsx-indept';
+import { Profiler } from 'react';
+import RefDom from './RefsAndDom';
+import NameForm from './UnControlledComponents';
 const MyComp = React.lazy(()=>import('./calc'))
 
 
 function App() {
+
+  function onRendercallback(id,phase,actualDuration,baseDuration,startTime,commitTime){
+    console.log(id,phase,actualDuration,baseDuration,startTime,commitTime)
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -47,10 +54,14 @@ function App() {
       <FrParentInput></FrParentInput>
       <Table></Table>
       <ClickCounter></ClickCounter>
-      <Hover></Hover> */}
-      {/* <Jquery></Jquery> */}
+      <Profiler id='Hover' onRender={onRendercallback}>
+      <Hover></Hover> 
+      </Profiler>
+      <Jquery></Jquery>
       <PortalDemo></PortalDemo>
-      <MyFunct></MyFunct>
+      <MyFunct></MyFunct> */}
+      <RefDom></RefDom>
+      <NameForm></NameForm>
       </header>
 
     </div>
